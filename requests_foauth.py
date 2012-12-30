@@ -41,7 +41,11 @@ class Foauth(BaseAdapter):
         p = urlparse(request.url)
 
         # Rewrite the url to use foauth.org
-        request.url = FOAUTH_TEMPLATE.format(domain=p.netloc, path=p.path)
+        path = p.path
+        if p.query:
+            path += '?' + p.query
+
+        request.url = FOAUTH_TEMPLATE.format(domain=p.netloc, path=path)
         # Authenticate appropriately.
         request.prepare_auth(self.auth)
 
