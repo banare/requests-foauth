@@ -28,7 +28,7 @@ from setuptools import setup
 
 setup(
     name='requests-foauth',
-    version='0.1.0',
+    version='0.1.1',
     url='https://github.com/kennethreitz/requests-foauth',
     license='BSD',
     author='Kenneth Reitz',
