@@ -19,7 +19,7 @@ Example usage
     from requests_foauth import Foauth
 
     s = requests.Session()
-    s.mount('http', Foauth('username', 'password))
+    s.mount('https://', Foauth('username', 'password))
 
     >>> s.get('https://api.500px.com/v1/users/')
     <Response [200]>
